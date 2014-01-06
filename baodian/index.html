@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>面试宝典</title>
+
+<script type="text/javascript" src="js/zepto.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" src="js/zside.js"></script>
+<link href="css/zside.css" rel="stylesheet" />
+
+
+<script type="text/javascript">
+	$(document).ready( function () {
+		$('#initBtn').on( 'click', function () {
+			// $.get( 'data/data.js' );
+			$.ajax({
+				url: 'data/data.js?t='+new Date().getTime(),
+				dataType: 'jsonp'
+			});
+		});
+	});
+</script>
+
+</head>
+<body style="background: #25c3ba">
+
+<div id="searchHeader" class="header">
+	<div class="scontainer">
+		<!-- <a id="searchLeftBtn">返回</a> -->
+		<div>
+			<input id="searchTxt" type="text" />
+		</div>
+		<div id="searchDiv" style="font-size:14px;">搜索</div>
+	</div>
+</div>
+<div id="header">
+	<a id="leftBtn"><img src="img/fanhui.png" style="width:25px; height:25px; margin:10px 0 0 8px;" /></a>
+	<label>面试宝典</label>
+	<a id="rightBtn" href="#search"><img src="img/sou.png" style="width:22px; height22px; margin:10px 8px 0 0;"/></a>
+</div>
+<div id="wrapper">
+	<div id="main" style="background: url(img/bg.png)">
+		<ul>
+			<li>
+				<a href="#list" id="srsy" title="四软四硬知识点列表">
+					<img src="img/w.png" />
+					<p>四软四硬</p>
+				</a>
+			</li>
+			<li>
+				<a href="#list" id="css" title="CSS知识点列表">
+					<img src="img/css.png" />
+					<p>CSS</p>
+				</a>
+			</li>
+			<li>
+				<a href="#list" id="css3" title="CSS3知识点列表">
+					<img src="img/c3.png" />
+					<p>CSS3</p>
+				</a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="#list" id="js" title="JavaScript知识点列表">
+					<img src="img/js.png" />
+					<p>JavaScript</p>
+				</a>
+			</li>
+			<li>
+				<a href="#list" id="jquery" title="jQuery知识点列表">
+					<img src="img/j.png" />
+					<p>jQuery</p>
+				</a>
+			</li>
+			<li>
+				<a href="#list" id="html5" title="HTML5知识点列表">
+					<img src="img/5.png" />
+					<p>HTML5</p>
+				</a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="#list" id="php" title="PHP知识点列表">
+					<img src="img/php.png" />
+					<p>PHP</p>
+				</a>
+			</li>
+			<li>
+				<a href="#list" id="sql" title="SQL知识点列表">
+					<img src="img/sql.png" />
+					<p>SQL</p>
+				</a>
+			</li>
+			<li>
+				<a href="#list" id="about" title="关于我们">
+					<img src="img/guan.png" />
+					<p>关于我们</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div id="favorite" style="background: green;">
+		favorite
+	</div>
+	<div id="history" style="background: yellow;">
+		<div class="scroller">
+			<ul>
+				<li>努力加载,请稍后...</li>
+			</ul>
+		</div>
+	</div>
+	<div id="config" style="background: yellow;">
+		<input id="initBtn" type="button" value="Init Data" />
+	</div>
+	<div id="list" style="background: yellow;">
+		<div class="scroller">
+			<ul>
+				<li>努力加载,请稍后...</li>
+			</ul>
+		</div>
+	</div>
+	<div id="detail" style="background: yellow;">
+		<p>努力加载中,请稍后...</p>
+	</div>
+	<div id="search" style="background: yellow;">
+		<div class="scroller">
+			<ul>
+				<li>请输入搜索条件</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="footer">
+	<div class="footer-item">
+		<a href="#main">&nbsp;知识点&nbsp;</a>
+		<a href="#favorite" title="我的收藏">我的收藏</a>
+		<a href="#history" title="历史记录">历史记录</a>
+		<a href="#config">系统设置</a>
+	</div>
+	<div class="masker">
+	  
+	</div>
+</div>
+
+</body>
+</html>
